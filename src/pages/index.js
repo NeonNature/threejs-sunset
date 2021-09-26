@@ -128,7 +128,7 @@ const IndexPage = () => (
           <Contact
             text={"www.minmaungmaung.com"}
             icon={faGlobe}
-            link={"tel:+959440259616"}
+            link={"https://www.minmaungmaung.com"}
           />
           <Contact
             text={"+95 9 440259616"}
