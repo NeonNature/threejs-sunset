@@ -1,0 +1,38 @@
+.header {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+
+  @media (max-width: 480px) {
+    margin-top: 150px;
+  }
+}
+.name {
+}
+.role {
+  font-size: 2rem;
+  color: #00a1e4;
+}
+
+.title {
+  color: #00a1e4;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 16px;
+
+  @media (max-width: 1000px) {
+    margin-top: 35px;
+  }
+}
+
+.flexContainer {
+  //display: flex;
+}
+
+.flex {
+  //flex: 1;
+}

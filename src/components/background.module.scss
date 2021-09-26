@@ -1,0 +1,105 @@
+%icon {
+  position: absolute;
+  font-size: 60px;
+  z-index: -100;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.background {
+  overflow-x: hidden;
+  z-index: -1;
+  height: 100%;
+}
+
+.icon1 {
+  @extend %icon;
+  top: 25%;
+  left: 25%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon2 {
+  @extend %icon;
+  top: 5%;
+  left: 95%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon3 {
+  @extend %icon;
+  top: 80%;
+  left: 81%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon4 {
+  @extend %icon;
+  top: 52%;
+  left: 4%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon5 {
+  @extend %icon;
+  top: 64%;
+  left: 89%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon6 {
+  @extend %icon;
+  top: 5%;
+  left: 8%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon7 {
+  @extend %icon;
+  top: 23%;
+  left: 72%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon8 {
+  @extend %icon;
+  top: 33%;
+  left: 89%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon9 {
+  @extend %icon;
+  top: 52%;
+  left: 44%;
+  animation: float2 6s ease-in-out infinite;
+}
+
+.icon10 {
+  @extend %icon;
+  top: 85%;
+  right: 95%;
+  animation: float2 6s ease-in-out infinite;
+}

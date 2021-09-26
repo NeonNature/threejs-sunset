@@ -1,0 +1,22 @@
+.contactContainer {
+  margin-bottom: 5px;
+}
+.contactIcon {
+  font-size: 30px;
+  margin-right: 15px;
+  vertical-align: middle;
+  color: #E77051;
+}
+.contactLink {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #000;
+
+  &:hover {
+    color: #E77051;
+  }
+}

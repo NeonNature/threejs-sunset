@@ -1,0 +1,22 @@
+.avatar {
+  border: 1px solid red;
+  max-width: 250px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  transform: rotate(-12deg);
+
+  @media (max-width: 1000px) {
+    max-width: 150px;
+    right: 25px;
+    top: 25px;
+  }
+}
+
+.paperclip {
+  color: #ffd166;
+  position: absolute;
+  font-size: 59px;
+  z-index: 2;
+  transform: rotate(91deg) translate(-10px, 41px);
+}
