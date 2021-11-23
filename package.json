@@ -20,6 +20,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "@react-three/drei": "^7.22.6",
+    "@react-three/fiber": "^7.0.19",
     "gatsby": "^3.12.1",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^3.0.0",
@@ -35,7 +37,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.39.0"
+    "react-slick": "^0.28.1",
+    "sass": "^1.39.0",
+    "three": "^0.134.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

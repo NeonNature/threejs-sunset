@@ -1,0 +1,27 @@
+%button {
+  zindex: 2;
+  border: 0;
+  color: #00a1e4;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  bottom: auto;
+  padding: 0.4em;
+  font-size: 2em;
+}
+
+.button_right {
+  @extend %button;
+  right: 0;
+}
+
+.button_left {
+  @extend %button;
+  left: 0;
+}
+
+.recommendation_container {
+  padding: 25px;
+  text-align: justify;
+}
