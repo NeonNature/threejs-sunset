@@ -3,12 +3,13 @@ import { useCallback, useMemo, useRef, useState, Suspense } from "react";
 import { container } from "./three.module.scss";
 import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
 import {
-  Box,
-  Plane,
-  ScrollControls,
-  PerspectiveCamera,
-  useScroll,
-  Sky,
+    Box,
+    Plane,
+    ScrollControls,
+    PerspectiveCamera,
+    useScroll,
+    Sky,
+    Cloud, Stars,
 } from "@react-three/drei";
 import Ocean from "./threejs/ocean";
 
@@ -69,13 +70,15 @@ import Ocean from "./threejs/ocean";
 
 const Composition = () => {
   const scroll = useScroll();
+  const initialX = 0;
+  const initialY = 5;
+  const initialZ = 100;
 
   useFrame((state) => {
-    const initialX = 0;
-    const initialY = 5;
-    const initialZ = 100;
+    state.camera.position.z = initialZ - scroll.scroll.current * 100;
+    state.camera.position.y = initialY + scroll.scroll.current * 1000;
 
-    state.camera.lookAt(initialX, initialY - (scroll.scroll.current/10*10), initialZ);
+    // state.camera.lookAt(initialX, initialY, initialZ + (scroll.scroll.current));
   });
 
   return (
@@ -86,7 +89,7 @@ const Composition = () => {
       {/*  <meshStandardMaterial attach="material" color="orange" />*/}
       {/*</Box>*/}
 
-      {/*<Box args={[1, 1, 1]} position={[0, 0, 0]} rotation={[10, 10, 10]}>*/}
+      {/*<Box args={[1, 1, 1]} position={[0, 15, 90]} rotation={[10, 10, 10]}>*/}
       {/*  <meshStandardMaterial attach="material" color="orange" />*/}
       {/*</Box>*/}
 
@@ -98,6 +101,12 @@ const Composition = () => {
       {/*  <meshStandardMaterial attach="material" color="orange" />*/}
       {/*</Plane>*/}
       <Suspense fallback={null}>
+        <Cloud position={[0, 15, 90]} args={[3, 2]} />
+        <Cloud position={[-4, -2, 0]} args={[3, 2]} />
+        <Cloud position={[-4, 2, 0]} args={[3, 2]} />
+        <Cloud args={[3, 2]} />
+        <Cloud position={[4, -2, 0]} args={[3, 2]} />
+        <Cloud position={[4, 2, 0]} args={[3, 2]} />
         <Ocean />
       </Suspense>
       <Sky
@@ -110,6 +119,7 @@ const Composition = () => {
         inclination={0.49}
         azimuth={0.25}
       />
+        {/*<Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />*/}
       {/*<Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />*/}
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -121,7 +131,12 @@ const Composition = () => {
 const Three = () => {
   return (
     <div className={container}>
-      <Canvas camera={{ position: [0, 5, 100], fov: 55, near: 1, far: 20000 }}>
+      <Canvas
+        camera={{
+          position: [0, 5, 10],
+          // , fov: 55, near: 1, far: 20000
+        }}
+      >
         <ScrollControls
           pages={3} // Each page takes 100% of the height of the canvas
           distance={1} // A factor that increases scroll bar travel (default: 1)
