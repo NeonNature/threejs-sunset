@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
+  "name": "threejs-sunset",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfolio",
-  "author": "NeonNature",
+  "description": "ThreeJS Sunset by Min Maung Maung",
+  "author": "Min Maung Maung",
   "keywords": [
     "gatsby"
   ],
