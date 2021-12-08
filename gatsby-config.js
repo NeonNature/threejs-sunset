@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.minmaungmaung.com",
-    title: "Min Maung Maung - Fullstack Developer",
-    description: `Portfolio Website of Min Maung Maung`,
+    siteUrl: "https://threejssunsetmain.gatsbyjs.io/",
+    title: "Sunset by Min Maung Maung",
+    description: `Made with ThreeJS and Gatsby`,
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -15,8 +15,8 @@ module.exports = {
       {
           resolve: `gatsby-plugin-manifest`,
           options: {
-              name: 'Min Maung Maung - Fullstack Developer',
-              short_name: 'Min Maung Maung',
+              name: 'Sunset by Min Maung Maung',
+              short_name: 'Sunset by Min Maung Maung',
               start_url: '/',
               icon: 'src/images/icon.png',
           },
